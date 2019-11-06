@@ -1,0 +1,100 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Jace/0.9.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.6/Jace.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Jace.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Jace/0.9.3": {
+      "sha512": "uqsMm5s41jMoHii53CctNDruFO6n2DUFKwQLyAYoJO71eAvCEBdpHJbwwaZhltg4TQTm90xoETd3PWIjRMKqfw==",
+      "type": "package",
+      "path": "jace/0.9.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jace.0.9.3.nupkg.sha512",
+        "jace.nuspec",
+        "lib/netstandard1.6/Jace.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "Jace >= 0.9.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\007\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\C#\\Evaluator\\Evaluator\\Evaluator.csproj",
+      "projectName": "Evaluator",
+      "projectPath": "D:\\C#\\Evaluator\\Evaluator\\Evaluator.csproj",
+      "packagesPath": "C:\\Users\\007\\.nuget\\packages\\",
+      "outputPath": "D:\\C#\\Evaluator\\Evaluator\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\007\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "dependencies": {
+          "Jace": {
+            "target": "Package",
+            "version": "[0.9.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

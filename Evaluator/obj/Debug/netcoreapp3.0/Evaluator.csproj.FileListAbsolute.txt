@@ -1,0 +1,7 @@
+D:\C#\Evaluator\Evaluator\bin\Debug\netcoreapp3.0\Evaluator.deps.json
+D:\C#\Evaluator\Evaluator\bin\Debug\netcoreapp3.0\Evaluator.dll
+D:\C#\Evaluator\Evaluator\bin\Debug\netcoreapp3.0\Evaluator.pdb
+D:\C#\Evaluator\Evaluator\obj\Debug\netcoreapp3.0\Evaluator.AssemblyInfoInputs.cache
+D:\C#\Evaluator\Evaluator\obj\Debug\netcoreapp3.0\Evaluator.AssemblyInfo.cs
+D:\C#\Evaluator\Evaluator\obj\Debug\netcoreapp3.0\Evaluator.dll
+D:\C#\Evaluator\Evaluator\obj\Debug\netcoreapp3.0\Evaluator.pdb
