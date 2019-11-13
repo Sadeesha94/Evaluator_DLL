@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Jace;
@@ -25,7 +26,7 @@ namespace Evaluator
             }
             else
             {
-                Console.WriteLine("Ooooops...Expression has Undefined Variables...!!");
+                Console.WriteLine("Ooooops...Expression has Undefined Variables or Doesn't have Valid Variables...!!");
                 return 0;
             }
             
@@ -33,18 +34,23 @@ namespace Evaluator
 
         private Boolean isValidate()
         {
-            string[] spearators = { "+", "-", "/", "*", "(", ")", " ", "sin", "cos", "tan" };
+            string[] separators = ConfigurationManager.AppSettings["separators"].Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
-            String[] splitList = _expression.Split(spearators, StringSplitOptions.RemoveEmptyEntries);
+            String[] splitList = _expression.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
             int variableCount = 0;
+            int validVariableCount = 0;
             int commonVariableCount = 0;
 
-            var regexPattern = new Regex(@"^[!@#$%^&A-Za-z_-][\w&\-\!\@\#\$\%\^]*$"); //[A-Za-z_-][A-Za-z0-9_-]*$
+            int value;
+            
+            int i = 0;
+
+            var regexPattern = new Regex(@"^[!@#$%^&A-Za-z_-][\w&\-\!\@\#\$\%\^]*$");
 
             foreach (String splitWord in splitList)
             {
-                if (regexPattern.IsMatch(splitWord))
+                if (!int.TryParse(splitWord, out value))
                 {
                     variableCount++;
                 }
@@ -53,7 +59,32 @@ namespace Evaluator
                     commonVariableCount++;
                 }
             }
-            if(variableCount != commonVariableCount)
+
+            string[] variableList = new string[variableCount];
+
+            foreach (String splitWord in splitList)
+            {
+                if (!int.TryParse(splitWord, out value))
+                {
+                    variableList[i] = splitWord;
+                    i++;
+                }
+            }
+
+            foreach(String splitWord in variableList)
+            {
+                if (regexPattern.IsMatch(splitWord))
+                {
+                    validVariableCount++;
+                }
+                else
+                {
+                    return false;
+                }
+                
+            }
+
+            if(validVariableCount != commonVariableCount)
             {
                 //Console.WriteLine("Ooooops...Expression has Undefined Variables...!!");
                 return false;
@@ -65,3 +96,4 @@ namespace Evaluator
         }
     }
 }
+
